@@ -23,13 +23,13 @@ $mail = new PHPMailer(true);
         $mail->isSMTP();
         $mail->Host = 'smtpout.secureserver.net';
         $mail->SMTPAuth = true;
-        $mail->Username = 'mail@sterlingpublishers.in';
-        $mail->Password = 'Ps@sppl13gn#';
+        $mail->Username = ''; // here enter your username of godday like dev@host.in
+        $mail->Password = ''; // here enter you email account password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
-        $mail->setFrom('dev@weblabz.in', 'Sterling');
-        $mail->addAddress('dev@weblabz.in', $_POST['contactPerson']);
+        $mail->setFrom('example@gmail.com', 'BPSRamTech'); // here enter your email for which gmail to show user.
+        $mail->addAddress('access@gmail.com', $_POST['contactPerson']); // here enter your gmail account for take message 
         $mail->isHTML(true);
         $mail->Subject = 'New  Inquiry';
 
